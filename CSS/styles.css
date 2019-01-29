@@ -1,0 +1,258 @@
+/* mixins */
+body {
+    margin: 0;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Fira Sans", "Open Sans", sans-serif;
+    font-weight: 300;
+    color: #37474F;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  h1, h3, h4 {
+    font-weight: 300;
+    color: #37474F;
+    font-family: Raleway, "Open Sans", sans-serif;
+  }
+  
+  h1 {
+    padding-top: 56px;
+    margin: 0 auto 10px auto;
+    font-weight: 400;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 1em;
+    line-height: 48px;
+    height: 48px;
+  }
+  header a {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-family: Raleway, "Open Sans", sans-serif;
+    color: #FFF;
+  }
+  header #brand {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #FFF;
+    padding: 5px;
+    float: left;
+    margin: 9px 15px;
+    font-size: 1em;
+    line-height: 1em;
+  }
+  header #brand:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .sticky {
+    font-size: 1em;
+    line-height: 48px;
+    height: 48px;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  .nav {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    transform: translate(0, -500px);
+    background-color: #90A4AE;
+  }
+  .nav a {
+    display: block;
+  }
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav.open {
+    -webkit-transform: translate(0, 48px);
+    -ms-transform: translate(0, 48px);
+    transform: translate(0, 48px);
+  }
+  
+  #nav-toggle-icon {
+    float: right;
+    color: #FFF;
+    line-height: 48px;
+    padding: 0px 15px;
+    font-size: 30px;
+  }
+  #nav-toggle-icon:hover {
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .container div {
+    margin: 0 auto;
+  }
+  .container .section {
+    margin-bottom: 38px;
+    padding: 0 15px;
+  }
+  .container .hr {
+    background-color: #37474F;
+    height: 1px;
+    width: 50%;
+  }
+  
+  .flex-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  #home {
+    background-color: #90A4AE;
+    padding: 100px 50px;
+  }
+  #home h1, #home h3, #home h4 {
+    color: #FFF;
+    margin: 10px;
+  }
+  #home h1 {
+    display: inline-block;
+    font-weight: 300;
+    border: 1px solid #FFF;
+    padding: 10px;
+    font-size: 3em;
+  }
+  #home h3, #home h4 {
+    font-family: "Fira Sans", "Open Sans", sans-serif;
+  }
+  
+  #about {
+    max-width: 700px;
+  }
+  
+  #portfolio h1, #portfolio p {
+    width: 100%;
+  }
+  #portfolio a {
+    max-width: 450px;
+    text-decoration: none;
+    color: #000;
+    margin: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.12);
+  }
+  #portfolio a:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 14px 14px rgba(0, 0, 0, 0.18);
+  }
+  #portfolio img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  #portfolio h4 {
+    max-width: 100%;
+    margin: 18px 5px;
+  }
+  
+  #contact {
+    margin-bottom: 60px;
+  }
+  #contact #links {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+  #contact #links div {
+    margin: 0;
+  }
+  #contact #links div:hover i {
+    background-color: #37474F;
+  }
+  #contact #links div:hover p {
+    visibility: visible;
+  }
+  #contact #links i {
+    height: 63px;
+    width: 63px;
+    font-size: 3.5em;
+    padding: 8px;
+    margin: 10px 16px;
+    background-color: #90A4AE;
+    color: #FFF;
+  }
+  #contact #links p {
+    margin: 0;
+    font-size: 14px;
+    display: block;
+    visibility: hidden;
+  }
+  
+  footer {
+    background-color: #37474F;
+    margin: 0;
+    padding: 10px;
+    color: #FFF;
+  }
+  
+  @media screen and (min-width: 501px) {
+    .nav {
+      position: relative;
+      height: 100%;
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    .nav a {
+      display: inline;
+    }
+    .nav a:hover {
+      border-bottom: 1px solid #FFF;
+      text-decoration: none;
+    }
+  
+    #nav-toggle-icon {
+      display: none;
+    }
+  
+    header {
+      line-height: 108px;
+      height: 108px;
+      font-size: 1.5em;
+      transition: all 0.2s ease;
+    }
+  
+    #home {
+      padding: 150px 50px 100px 50px;
+    }
+  
+    #portfolio {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    #portfolio a {
+      -webkit-flex: 1 1 300px;
+      -ms-flex: 1 1 300px;
+      flex: 1 1 300px;
+    }
+  }
+  
